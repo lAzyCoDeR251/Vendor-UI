@@ -98,7 +98,7 @@ export default function EnhancedVendorDashboard({ isDarkMode }) {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/vendors");
+        const response = await axios.get("https://server-vendor.onrender.com/api/vendors");
         setVendors(response.data);
         setLoading(false);
       } catch (err) {
@@ -120,7 +120,7 @@ export default function EnhancedVendorDashboard({ isDarkMode }) {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/vendors/${vendorId}`
+        `https://server-vendor.onrender.com/api/vendors/${vendorId}`
       );
       setSelectedVendor(response.data);
       setIsModalOpen(true);
