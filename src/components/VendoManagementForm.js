@@ -58,7 +58,7 @@ const VendorManagementForm = ({ isDarkMode }) => {
     try {
       // Make a POST request to your backend to save the vendor data
       const response = axios.post(
-        "http://localhost:5000/api/vendors",
+        "https://server-vendor.onrender.com/api/vendors",
         formData
       );
       console.log("Vendor Data Submitted:", response.data);
