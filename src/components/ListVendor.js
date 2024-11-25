@@ -11,7 +11,7 @@ export default function VendorListView({ isDarkMode, onAddVendor }) {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/vendors");
+        const response = await axios.get("https://server-vendor.onrender.com/api/vendors");
         setVendors(response.data); // Store vendors in state
         console.log(response.data);
 
